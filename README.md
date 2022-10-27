@@ -9,14 +9,32 @@ POC App for WZ RestAPI
 + Authentication
 + Deployment
 
-## Using the applicaiton
+## Local Docker Setup
+
+To run the application locally using Docker, follow these steps:
+
+1. Clone this repository
+
+2. Build the Docker images
+
+```console
+docker-compose build
+```
+
+3. Start the Docker images
+
+```console
+docker-compose up -d
+```
+
+## Dev Setup
 
 To use the application, follow the outlined steps:
 
 1. Clone this repository and create a virtual environment in it:
 
 ```console
-$ python3 -m venv venv
+$ python -m virtualenv .
 ```
 
 2. Install the modules listed in the `requirements.txt` file:

@@ -14,3 +14,7 @@ services:
       - "27017"
     volumes:
       - data:/bitnami/mongodb
+
+
+volumes:
+  data:
