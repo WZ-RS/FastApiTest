@@ -5,7 +5,6 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseSettings
 
 from models.admin import Admin
-from models.student import Student
 from models.article import Article
 
 
@@ -25,4 +24,4 @@ class Settings(BaseSettings):
 async def initiate_database():
     client = AsyncIOMotorClient(Settings().DATABASE_URL)
     await init_beanie(database=client.get_default_database(),
-                      document_models=[Admin, Student, Article])
+                      document_models=[Admin, Article])
