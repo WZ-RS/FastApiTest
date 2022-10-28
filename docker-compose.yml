@@ -4,7 +4,7 @@ services:
   web:
     build: .
     ports:
-      - "8888:8080"
+      - "8888:8888"
     env_file:
       - .env
 
@@ -14,6 +14,8 @@ services:
       - "27017"
     volumes:
       - data:/bitnami/mongodb
+    expose:
+      - "27017"
 
 
 volumes:
